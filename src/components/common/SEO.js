@@ -15,6 +15,7 @@ const SEO_DATA = {
 const SEO = () => {
   return (
     <Helmet>
+      <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
       <meta property="fb:app_id" content={SEO_DATA.facebookId} />
       <meta property="og:title" content={SEO_DATA.title} />
       <meta property="og:type" content="website" />
@@ -33,7 +34,6 @@ const SEO = () => {
       <meta name="description" content={SEO_DATA.description} />
       <meta name="keywords" content={SEO_DATA.keywords.join(', ')} />
       <meta name="author" content={SEO_DATA.author} />
-      <meta charSet="utf-8" />
       <title>{SEO_DATA.title}</title>
       <html lang="de" />
     </Helmet>
