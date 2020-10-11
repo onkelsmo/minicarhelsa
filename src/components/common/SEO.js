@@ -2,13 +2,13 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 const SEO_DATA = {
-  description: 'An absurd gatsby starter',
-  title: 'Absurd',
+  description: 'Minicar Helsa',
+  title: 'Minicar Helsa',
   url: '',
-  author: 'ajayns',
-  keywords: ['gatsby', 'site', 'absurd'],
+  author: 'Jan Smolka',
+  keywords: ['gatsby', 'site', 'minicar', 'helsa'],
   img: '',
-  twitterId: '@ajayns_',
+  twitterId: '',
   facebookId: '',
 };
 
@@ -33,8 +33,9 @@ const SEO = () => {
       <meta name="description" content={SEO_DATA.description} />
       <meta name="keywords" content={SEO_DATA.keywords.join(', ')} />
       <meta name="author" content={SEO_DATA.author} />
+      <meta charSet="utf-8" />
       <title>{SEO_DATA.title}</title>
-      <html lang="en" />
+      <html lang="de" />
     </Helmet>
   );
 };
