@@ -3,6 +3,7 @@ const path = require('path');
 module.exports = {
   pathPrefix: `/mch`,
   plugins: [
+    `gatsby-remark-smarttypo`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-svgr`,

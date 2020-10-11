@@ -47,7 +47,7 @@ const Footer = () => (
             <Copyright>
               <h2>Minicar Helsa</h2>
               <span>
-                Copyright © {' '}
+                Copyright &copy; {' '}
                 {new Date().getFullYear().toString()}
                 {' | '}
                 Impressum
