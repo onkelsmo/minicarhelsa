@@ -11,6 +11,7 @@ import {
   NavListWrapper,
   MobileMenu,
   Mobile,
+  Sublemental
 } from './style';
 
 import { ReactComponent as MenuIcon } from '@static/icons/menu.svg';
@@ -63,6 +64,8 @@ class Navbar extends Component {
             <AnchorLink href={`#start`} onClick={this.closeMobileMenu}>
               Minicar Helsa
             </AnchorLink>
+            <br />
+            <Sublemental>Freundlich - Seriös - Sicher - Zuverlässig - Pünktlich</Sublemental>
           </Brand>
           <Mobile>
             <button onClick={this.toggleMobileMenu} style={{ color: 'black' }}>

@@ -4,6 +4,7 @@ const theme = {
     secondary: `'Roboto', serif`,
   },
   font_size: {
+    smaller: 'font-size: 18px; line-height: 28px',
     small: 'font-size: 20px; line-height: 30px',
     regular: 'font-size: 24px; line-height: 32px',
     large: 'font-size: 30px; line-height: 40px',
@@ -21,7 +22,7 @@ const theme = {
       regular: '#211E26',
     },
     primary: '#9f9d9d',
-    secondary: '#a42f2f',
+    secondary: '#ee4c45',
     secondary_light: '#b85454'
   },
   screen: {

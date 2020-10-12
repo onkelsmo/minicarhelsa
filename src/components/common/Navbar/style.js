@@ -4,7 +4,7 @@ import { Container } from '@components/global';
 
 export const Nav = styled.nav`
   padding: 16px 0;
-  background-color: rgba(159, 157, 157, .95);
+  background-color: rgba(246, 246, 246, 0.95);
   position: fixed;
   width: 100%;
   top: 0;
@@ -63,7 +63,8 @@ export const MobileMenu = styled.div`
 
 export const Brand = styled.div`
   font-family: ${props => props.theme.font.primary};
-  ${props => props.theme.font_size.large};
+  text-shadow: 1px 1px black;
+  ${props => props.theme.font_size.larger};
   
   a {
     text-decoration: none;
@@ -76,6 +77,12 @@ export const Brand = styled.div`
     }
   }
 `;
+
+export const Sublemental = styled.div`
+  ${props => props.theme.font_size.smaller};
+  text-shadow: none;
+  font-weight: bold;
+`
 
 export const Mobile = styled.div`
   display: none;

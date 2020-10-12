@@ -25,17 +25,7 @@ const TEAM = [
     name: 'Todd Joseph',
     image: 'todd.jpg',
     role: 'Designer',
-  },
-  {
-    name: 'Martin White',
-    image: 'martin.jpg',
-    role: 'Backend Engineer',
-  },
-  {
-    name: 'Rose Leslie',
-    image: 'rose.jpg',
-    role: 'Marketing',
-  },
+  }
 ];
 
 const Team = () => (
@@ -85,12 +75,6 @@ const Team = () => (
               );
             })}
           </TeamGrid>
-          <Art>
-            <Img fluid={data.art_team.childImageSharp.fluid} />
-          </Art>
-          <ArtMobile>
-            <Img fluid={data.art_team.childImageSharp.fluid} />
-          </ArtMobile>
         </Container>
       </Section>
     )}
@@ -117,34 +101,6 @@ const TeamGrid = styled.div`
 
   @media (max-width: ${props => props.theme.screen.xs}) {
     grid-gap: 24px;
-  }
-`;
-
-const Art = styled.figure`
-  width: 800px;
-  margin: -80px 0;
-  position: absolute;
-  top: 0;
-  left: 70%;
-
-  @media (max-width: ${props => props.theme.screen.lg}) {
-    top: 20%;
-  }
-
-  @media (max-width: ${props => props.theme.screen.md}) {
-    display: none;
-  }
-`;
-
-const ArtMobile = styled.figure`
-  width: 100%;
-  margin: 0;
-  display: none;
-  margin-top: 64px;
-  margin-bottom: -60%;
-
-  @media (max-width: ${props => props.theme.screen.md}) {
-    display: block;
   }
 `;
 

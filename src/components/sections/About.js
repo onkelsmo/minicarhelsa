@@ -2,16 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-
 import { Section, Container } from '@components/global';
+import TelLink from '../common/TelLink';
 
 const About = () => (
   <StaticQuery
     query={graphql`
       query {
-        art_fast: file(
+        art_belingo_side_open: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "fast" }
+          name: { eq: "belingo_side_open" }
         ) {
           childImageSharp {
             fluid(maxWidth: 760) {
@@ -20,9 +20,9 @@ const About = () => (
           }
         }
 
-        art_learn: file(
+        art_belingo_back_open: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "learn_yourself" }
+          name: { eq: "belingo_back_open" }
         ) {
           childImageSharp {
             fluid(maxWidth: 760) {
@@ -44,50 +44,75 @@ const About = () => (
       }
     `}
     render={data => (
-      <Section id="über uns">
+      <Section id="über uns" accent="secondary">
         <Container>
           <Grid>
-            <div>
-              <h2>Speed past the competition</h2>
-              <p>
-                Gatsby.js builds the fastest possible website. Instead of
-                waiting to generate pages when requested, pre-build pages and
-                lift them into a global cloud of servers — ready to be delivered
-                instantly to your users wherever they are.
-              </p>
-            </div>
-            <Art>
-              <Img fluid={data.art_fast.childImageSharp.fluid} />
-            </Art>
-          </Grid>
-          <Grid inverse>
-            <Art>
-              <Img fluid={data.art_learn.childImageSharp.fluid} />
-            </Art>
-            <div>
-              <h2>Nothing new to learn here</h2>
-              <p>
-                Enjoy the power of the latest web technologies – React.js ,
-                Webpack , modern JavaScript and CSS and more — all set up and
-                waiting for you to start building.
-              </p>
-            </div>
+            <Text>
+              Das Minicar an Ihrer Seite - seit mehr als 20 Jahren!
+              <br />
+              Rufen Sie doch einfach an!
+            </Text>
+            <StyledTelLink tel="05605923162">
+              05605 92 31 62
+            </StyledTelLink>
           </Grid>
           <Grid>
             <div>
-              <h2>Grow and build your ideas</h2>
+              <h2>Unsere Dienstleistungen:</h2>
               <p>
-                Waste no more time on tooling and performance. Focus on the the
-                site you want to build and nothing more.
+                <ul>
+                  <li>Minicar</li>
+                  <li>Arzt besuche</li>
+                  <li>Reha Maßnahmen</li>
+                  <li>Kur Aufenthalt</li>
+                  <li>Einkaufsfahrten</li>
+                  <li>Flughafentransfer</li>
+                  <li>Dialyse</li>
+                  <li>Chemotherapie</li>
+                  <li>Strahlentherapie</li>
+                  <li>Rollstuhlfahrten</li>
+                  <li>Express</li>
+                  <li>Kurierfahrten</li>
+                </ul>
+                In Verbindung mit allen Krankenkassen!
                 <br />
-                <br />
-                Gatsby is fast in every way that matters.
+                Auch für Firmen: bei Arbeitsunfällen
               </p>
             </div>
             <Art>
-              <Img fluid={data.art_ideas.childImageSharp.fluid} />
+              <Img fluid={data.art_belingo_side_open.childImageSharp.fluid} />
+              <br />
+              <Img fluid={data.art_belingo_back_open.childImageSharp.fluid} />
             </Art>
           </Grid>
+          {/*<Grid inverse>*/}
+          {/*  <Art>*/}
+          {/*    <Img fluid={data.art_learn.childImageSharp.fluid} />*/}
+          {/*  </Art>*/}
+          {/*  <div>*/}
+          {/*    <h2>Nothing new to learn here</h2>*/}
+          {/*    <p>*/}
+          {/*      Enjoy the power of the latest web technologies – React.js ,*/}
+          {/*      Webpack , modern JavaScript and CSS and more — all set up and*/}
+          {/*      waiting for you to start building.*/}
+          {/*    </p>*/}
+          {/*  </div>*/}
+          {/*</Grid>*/}
+          {/*<Grid>*/}
+          {/*  <div>*/}
+          {/*    <h2>Grow and build your ideas</h2>*/}
+          {/*    <p>*/}
+          {/*      Waste no more time on tooling and performance. Focus on the the*/}
+          {/*      site you want to build and nothing more.*/}
+          {/*      <br />*/}
+          {/*      <br />*/}
+          {/*      Gatsby is fast in every way that matters.*/}
+          {/*    </p>*/}
+          {/*  </div>*/}
+          {/*  <Art>*/}
+          {/*    <Img fluid={data.art_ideas.childImageSharp.fluid} />*/}
+          {/*  </Art>*/}
+          {/*</Grid>*/}
         </Container>
       </Section>
     )}
@@ -137,6 +162,29 @@ const Art = styled.figure`
   margin: 0;
   max-width: 380px;
   width: 100%;
+`;
+
+const Text = styled.div`
+  color: black;
+  font-weight: bold;
+  justify-self: start;
+  ${props => props.theme.font_size.smaller};
+  
+  @media (max-width: ${props => props.theme.screen.md}) {
+    justify-self: start;
+  }
+`;
+
+const StyledTelLink = styled(TelLink)`
+  color: ${props => props.theme.color.secondary};
+  text-decoration: none;
+  text-shadow: 2px 2px black;
+  font-size: 60px;
+  font-weight: bolder;
+
+  &:hover {
+    color: ${props => props.theme.color.secondary_light};
+  }
 `;
 
 export default About;
