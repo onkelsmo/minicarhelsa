@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Scrollspy from 'react-scrollspy';
 
+import { Link } from "gatsby"
 import { Container } from '@components/global';
 import {
   Nav,
@@ -33,11 +34,11 @@ class Navbar extends Component {
     }
   };
 
-  getNavAnchorLink = item => (
-    <AnchorLink href={`#${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
+  getNavAnchorLink = (item) => (
+    <AnchorLink offset='100' href={`#${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
       {item}
     </AnchorLink>
-  );
+  )
 
   getNavList = ({ mobile = false }) => (
     <NavListWrapper mobile={mobile}>
@@ -61,27 +62,38 @@ class Navbar extends Component {
       <Nav {...this.props}>
         <StyledContainer>
           <Brand>
-            <AnchorLink href={`#start`} onClick={this.closeMobileMenu}>
-              Minicar Helsa
-            </AnchorLink>
+            {this.props.origin === 'imprint' &&
+              <Link to={'/'}>Minicar Helsa</Link>
+            }
+            {this.props.origin !== 'imprint' &&
+              <AnchorLink href={`#start`} onClick={this.closeMobileMenu}>
+                Minicar Helsa
+              </AnchorLink>
+            }
             <br />
             <Sublemental>Freundlich - Seriös - Sicher - Zuverlässig - Pünktlich</Sublemental>
           </Brand>
-          <Mobile>
-            <button onClick={this.toggleMobileMenu} style={{ color: 'black' }}>
-              <MenuIcon />
-            </button>
-          </Mobile>
+          {this.props.origin !== 'imprint' &&
+            <Mobile>
+              <button onClick={this.toggleMobileMenu} style={{ color: 'black' }}>
+                <MenuIcon />
+              </button>
+            </Mobile>
+          }
 
-          <Mobile hide>{this.getNavList({})}</Mobile>
+          {this.props.origin !== 'imprint' &&
+            <Mobile hide>{this.getNavList({})}</Mobile>
+          }
         </StyledContainer>
-        <Mobile>
-          {mobileMenuOpen && (
-            <MobileMenu>
-              <Container>{this.getNavList({ mobile: true })}</Container>
-            </MobileMenu>
-          )}
-        </Mobile>
+        {this.props.origin !== 'imprint' &&
+          <Mobile>
+            {mobileMenuOpen && (
+              <MobileMenu>
+                <Container>{this.getNavList({ mobile: true })}</Container>
+              </MobileMenu>
+            )}
+          </Mobile>
+        }
       </Nav>
     );
   }

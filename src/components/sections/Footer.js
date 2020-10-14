@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
-
 import { Container } from '@components/global';
+import { Link } from "gatsby"
 // import ExternalLink from '@common/ExternalLink';
 
 // import GithubIcon from '@static/icons/github.svg';
@@ -50,7 +50,7 @@ const Footer = () => (
                 Copyright &copy; {' '}
                 {new Date().getFullYear().toString()}
                 {' | '}
-                Impressum
+                <Link to="/imprint">Impressum</Link>
               </span>
             </Copyright>
             {/*<SocialIcons>*/}
