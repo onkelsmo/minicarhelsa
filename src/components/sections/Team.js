@@ -7,24 +7,24 @@ import { Section, Container } from '@components/global';
 
 const TEAM = [
   {
-    name: 'Josh Peck',
+    name: 'Thomas Marr',
     image: 'josh.jpg',
-    role: 'Founder',
+    role: 'Geschäftsführer',
   },
   {
-    name: 'Lisa Haydon',
+    name: 'Angelika Marr',
     image: 'lisa.jpg',
-    role: 'Art Director',
+    role: 'Geschäftsführerin',
   },
   {
     name: 'Ashlyn Harris',
     image: 'ashlyn.jpg',
-    role: 'Frontend Engineer',
+    role: 'Fahrerin',
   },
   {
     name: 'Todd Joseph',
     image: 'todd.jpg',
-    role: 'Designer',
+    role: 'Fahrer',
   }
 ];
 

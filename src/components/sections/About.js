@@ -62,9 +62,9 @@ const About = () => (
               <p>
                 <ul>
                   <li>Minicar</li>
-                  <li>Arzt besuche</li>
-                  <li>Reha Maßnahmen</li>
-                  <li>Kur Aufenthalt</li>
+                  <li>Arztbesuche</li>
+                  <li>Rehamaßnahmen</li>
+                  <li>Kuraufenthalt</li>
                   <li>Einkaufsfahrten</li>
                   <li>Flughafentransfer</li>
                   <li>Dialyse</li>
