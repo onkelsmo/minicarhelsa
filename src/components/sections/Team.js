@@ -7,26 +7,45 @@ import { Section, Container } from '@components/global';
 
 const TEAM = [
   {
-    name: 'Thomas Marr',
-    image: 'josh.jpg',
-    role: 'Geschäftsführer',
-  },
-  {
     name: 'Angelika Marr',
-    image: 'lisa.jpg',
-    role: 'Geschäftsführerin',
+    image: 'Angelika.jpg',
+    role: 'Geschäftsführerin, Fahrerin',
   },
   {
-    name: 'Ashlyn Harris',
-    image: 'ashlyn.jpg',
-    role: 'Fahrerin',
+    name: 'Thomas Marr',
+    image: 'Thomas.jpg',
+    role: 'Betriebsleiter, Fahrer',
   },
   {
-    name: 'Todd Joseph',
-    image: 'todd.jpg',
+    name: 'Detlef Hylsky',
+    image: 'Detlef.jpg',
+    role: 'Fahrer',
+  },
+  {
+    name: 'Markus Krüger',
+    image: 'Male-generic-image.png',
     role: 'Fahrer',
   }
 ];
+
+const CARS = [
+  {
+    name: 'ta3888',
+    image: 'ta3888.jpg'
+  },
+  {
+    name: 'ta4888',
+    image: 'ta4888.jpg'
+  },
+  {
+    name: 'ta5888',
+    image: 'ta5888.jpg'
+  },
+  {
+    name: 'ta6888',
+    image: 'ta6888.jpg'
+  }
+]
 
 const Team = () => (
   <StaticQuery
@@ -41,16 +60,6 @@ const Team = () => (
                   ...GatsbyImageSharpFluid
                 }
               }
-            }
-          }
-        }
-        art_team: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "team_work" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 1600) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
@@ -75,6 +84,29 @@ const Team = () => (
               );
             })}
           </TeamGrid>
+          <br />
+          <br />
+          <h1>Die Flotte</h1>
+          <TeamGrid>
+            {CARS.map(({ name, image }) => {
+              let node = null
+
+              data.allFile.edges.map(item => {
+                if (item.node.relativePath === image) {
+                  node = item.node
+                }
+                return null
+              })
+              return (
+                <div key={name}>
+                  {node !== null &&
+                    <Img fluid={node.childImageSharp.fluid} alt={name} />
+                  }
+                  {/*<Title>{name}</Title>*/}
+                </div>
+              );
+            })}
+          </TeamGrid>
         </Container>
       </Section>
     )}
@@ -83,7 +115,7 @@ const Team = () => (
 
 const TeamGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
+  grid-template-columns: 280px 280px;
   grid-template-rows: min-content;
   grid-gap: 50px;
   justify-content: space-between;

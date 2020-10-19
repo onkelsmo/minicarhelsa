@@ -31,12 +31,12 @@ const About = () => (
           }
         }
 
-        art_ideas: file(
+        art_cars_group: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "ideas" }
+          name: { eq: "cars_group" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 760) {
+            fluid(maxWidth: 2000) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -59,21 +59,21 @@ const About = () => (
           <Grid>
             <div>
               <h2>Unsere Dienstleistungen:</h2>
+              <UL>
+                <li>Minicar</li>
+                <li>Arztbesuche</li>
+                <li>Rehamaßnahmen</li>
+                <li>Kuraufenthalt</li>
+                <li>Einkaufsfahrten</li>
+                <li>Flughafentransfer</li>
+                <li>Dialyse</li>
+                <li>Chemotherapie</li>
+                <li>Strahlentherapie</li>
+                <li>Rollstuhlfahrten</li>
+                <li>Express</li>
+                <li>Kurierfahrten</li>
+              </UL>
               <p>
-                <ul>
-                  <li>Minicar</li>
-                  <li>Arztbesuche</li>
-                  <li>Rehamaßnahmen</li>
-                  <li>Kuraufenthalt</li>
-                  <li>Einkaufsfahrten</li>
-                  <li>Flughafentransfer</li>
-                  <li>Dialyse</li>
-                  <li>Chemotherapie</li>
-                  <li>Strahlentherapie</li>
-                  <li>Rollstuhlfahrten</li>
-                  <li>Express</li>
-                  <li>Kurierfahrten</li>
-                </ul>
                 In Verbindung mit allen Krankenkassen!
                 <br />
                 Auch für Firmen: bei Arbeitsunfällen
@@ -85,34 +85,9 @@ const About = () => (
               <Img fluid={data.art_belingo_back_open.childImageSharp.fluid} />
             </Art>
           </Grid>
-          {/*<Grid inverse>*/}
-          {/*  <Art>*/}
-          {/*    <Img fluid={data.art_learn.childImageSharp.fluid} />*/}
-          {/*  </Art>*/}
-          {/*  <div>*/}
-          {/*    <h2>Nothing new to learn here</h2>*/}
-          {/*    <p>*/}
-          {/*      Enjoy the power of the latest web technologies – React.js ,*/}
-          {/*      Webpack , modern JavaScript and CSS and more — all set up and*/}
-          {/*      waiting for you to start building.*/}
-          {/*    </p>*/}
-          {/*  </div>*/}
-          {/*</Grid>*/}
-          {/*<Grid>*/}
-          {/*  <div>*/}
-          {/*    <h2>Grow and build your ideas</h2>*/}
-          {/*    <p>*/}
-          {/*      Waste no more time on tooling and performance. Focus on the the*/}
-          {/*      site you want to build and nothing more.*/}
-          {/*      <br />*/}
-          {/*      <br />*/}
-          {/*      Gatsby is fast in every way that matters.*/}
-          {/*    </p>*/}
-          {/*  </div>*/}
-          {/*  <Art>*/}
-          {/*    <Img fluid={data.art_ideas.childImageSharp.fluid} />*/}
-          {/*  </Art>*/}
-          {/*</Grid>*/}
+            <BreakerImg>
+              <Img fluid={data.art_cars_group.childImageSharp.fluid} />
+            </BreakerImg>
         </Container>
       </Section>
     )}
@@ -160,7 +135,13 @@ const Grid = styled.div`
 
 const Art = styled.figure`
   margin: 0;
-  max-width: 380px;
+  max-width: 760px;
+  width: 100%;
+`;
+
+const BreakerImg = styled.div`
+  margin: 0;
+  //max-width: 760px;
   width: 100%;
 `;
 
@@ -174,6 +155,12 @@ const Text = styled.div`
     justify-self: start;
   }
 `;
+
+const UL = styled.ul`
+    font-size: 24px;
+    line-height: 32px;
+    color: #564F62;
+`
 
 const StyledTelLink = styled(TelLink)`
   color: ${props => props.theme.color.secondary};
