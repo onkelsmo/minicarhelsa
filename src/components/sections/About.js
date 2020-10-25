@@ -57,6 +57,16 @@ const About = () => (
             </StyledTelLink>
           </Grid>
           <Grid>
+            <div />
+            <Text>
+              <Red>Unsere Fahrzeiten</Red>
+              Mo. - Fr.: <Normal>06:00 - 20:00 Uhr</Normal><br />
+              Sa.: <Normal>06:00 - 14:00 Uhr</Normal><br />
+              Sonntag u. Feiertage:<br />
+              <Red>Nur nach Vereinbarung</Red><br />
+            </Text>
+          </Grid>
+          <Grid>
             <div>
               <h2>Unsere Dienstleistungen:</h2>
               <UL>
@@ -74,15 +84,10 @@ const About = () => (
                 <li>Kurierfahrten</li>
               </UL>
               <p>
-                In Verbindung mit allen Krankenkassen!
-                <br />
-                Auch für Firmen: bei Arbeitsunfällen
-              </p>
-              <br />
-              <p>
+                In Verbindung mit allen Krankenkassen!<br />
+                Auch für Firmen: bei Arbeitsunfällen<br /><br />
                 Sie haben den Transportschein,<br />
-                wir kümmern uns um den Rest.<br />
-                Alle Krankenkassen werden akzeptiert.<br />
+                wir kümmern uns um den Rest.
               </p>
             </div>
             <Art>
@@ -139,6 +144,10 @@ const Grid = styled.div`
   }
 `;
 
+const Red = styled.div`
+  color: ${props => props.theme.color.secondary};
+`
+
 const Art = styled.figure`
   margin: 0;
   max-width: 760px;
@@ -150,6 +159,10 @@ const BreakerImg = styled.div`
   //max-width: 760px;
   width: 100%;
 `;
+
+const Normal = styled.span`
+ font-weight: normal;
+`
 
 const Text = styled.div`
   color: black;
