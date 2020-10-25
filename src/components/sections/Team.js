@@ -41,10 +41,10 @@ const CARS = [
     name: 'ta5888',
     image: 'ta5888.jpg'
   },
-  {
-    name: 'ta6888',
-    image: 'ta6888.jpg'
-  }
+  // {
+  //   name: 'ta6888',
+  //   image: 'ta6888.jpg'
+  // }
 ]
 
 const Team = () => (

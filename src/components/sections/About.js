@@ -48,7 +48,7 @@ const About = () => (
         <Container>
           <Grid>
             <Text>
-              Das Minicar an Ihrer Seite - seit mehr als 20 Jahren!
+              Das Minicar an Ihrer Seite - Familienbetrieb seit mehr als 20 Jahren!
               <br />
               Rufen Sie doch einfach an!
             </Text>
@@ -77,6 +77,12 @@ const About = () => (
                 In Verbindung mit allen Krankenkassen!
                 <br />
                 Auch für Firmen: bei Arbeitsunfällen
+              </p>
+              <br />
+              <p>
+                Sie haben den Transportschein,<br />
+                wir kümmern uns um den Rest.<br />
+                Alle Krankenkassen werden akzeptiert.<br />
               </p>
             </div>
             <Art>
@@ -148,7 +154,7 @@ const BreakerImg = styled.div`
 const Text = styled.div`
   color: black;
   font-weight: bold;
-  justify-self: start;
+  justify-self: end;
   ${props => props.theme.font_size.smaller};
   
   @media (max-width: ${props => props.theme.screen.md}) {

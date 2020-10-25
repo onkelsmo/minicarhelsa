@@ -63,6 +63,7 @@ export const MobileMenu = styled.div`
 
 export const Brand = styled.div`
   font-family: ${props => props.theme.font.primary};
+  font-weight: bolder;
   text-shadow: 1px 1px black;
   ${props => props.theme.font_size.larger};
   
