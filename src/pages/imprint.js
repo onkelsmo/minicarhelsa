@@ -11,32 +11,30 @@ const Imprint = () => (
     <Container>
       <Grid>
         <h1>Impressum</h1>
-        <br />
-        <p>https://www.impressum-generator.de/impressum-generator/</p>
-        <br />
         <p>Angaben gemäß § 5 TMG</p>
-        <p>Max Muster <br />
-          Musterweg<br />
-          12345 Musterstadt <br />
+        <p>
+          Minicar Helsa UG<br />
+          <br />
+          Gesellschafter Inhaber:<br />
+          Sascha Marr<br />
+          <br />
+          Geschäftsführerin:<br />
+          Angelika Marr<br />
+          <br />
+          Am Stubberg 7<br />
+          34298 Helsa
         </p>
-        <p><strong>Vertreten durch: </strong><br />
-          Max Muster<br />
+        <p>
+          <strong>Registereintrag: </strong><br />
+          Amtsgericht Kassel HRB 16559
         </p>
-        <p><strong>Kontakt:</strong> <br />
-          Telefon: 01234-789456<br />
-          Fax: 1234-56789<br />
-          E-Mail: <a href='mailto:max@muster.de'>max@muster.de</a><br />
-        </p>
-        <p><strong>Umsatzsteuer-ID: </strong> <br />
-          Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz: Musterustid.<br /><br />
-          <strong>Wirtschafts-ID: </strong><br />
-          Musterwirtschaftsid<br />
-        </p>
-        <p><strong>Aufsichtsbehörde:</strong><br />
-          Musteraufsicht Musterstadt<br />
-        </p>
-        <p><strong>Haftungsausschluss: </strong><br /><br /><strong>Haftung für
-          Inhalte</strong><br /><br />
+        <p>
+          <strong>Haftungsausschluss: </strong>
+          <br />
+          <br />
+          <strong>Haftung für Inhalte</strong>
+          <br />
+          <br />
           Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und
           Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1
           TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG
