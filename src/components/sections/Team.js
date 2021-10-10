@@ -21,31 +21,31 @@ const TEAM = [
     image: 'Detlef.jpg',
     role: 'Fahrer',
   },
-  {
-    name: 'Markus Krüger',
-    image: 'Male-generic-image.png',
-    role: 'Fahrer',
-  }
+  // {
+  //   name: 'Markus Krüger',
+  //   image: 'Male-generic-image.png',
+  //   role: 'Fahrer',
+  // }
 ];
 
 const CARS = [
   {
     name: 'ta3888',
-    image: 'ta3888.jpg'
+    image: 'ta3888.jpg',
   },
   {
     name: 'ta4888',
-    image: 'ta4888.jpg'
+    image: 'ta4888.jpg',
   },
   {
     name: 'ta5888',
-    image: 'ta5888.jpg'
+    image: 'ta5888.jpg',
   },
   // {
   //   name: 'ta6888',
   //   image: 'ta6888.jpg'
   // }
-]
+];
 
 const Team = () => (
   <StaticQuery
@@ -66,7 +66,7 @@ const Team = () => (
       }
     `}
     render={data => (
-      <Section id="das team" accent="secondary">
+      <Section id='das team' accent='secondary'>
         <Container style={{ position: 'relative' }}>
           <h1>Das Team</h1>
           <TeamGrid>
@@ -89,19 +89,19 @@ const Team = () => (
           <h1>Die Flotte</h1>
           <TeamGrid>
             {CARS.map(({ name, image }) => {
-              let node = null
+              let node = null;
 
               data.allFile.edges.map(item => {
                 if (item.node.relativePath === image) {
-                  node = item.node
+                  node = item.node;
                 }
-                return null
-              })
+                return null;
+              });
               return (
                 <div key={name}>
-                  {node !== null &&
+                  {node !== null && (
                     <Img fluid={node.childImageSharp.fluid} alt={name} />
-                  }
+                  )}
                   {/*<Title>{name}</Title>*/}
                 </div>
               );
