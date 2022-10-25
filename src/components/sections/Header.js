@@ -31,7 +31,7 @@ const White = styled.span`
 `;
 
 const JobOfferText = styled.div`
-  font-family: ${props => props.theme.font.primary};
+  //font-family: ${props => props.theme.font.primary};
   font-weight: bolder;
   text-shadow: 1px 1px white;
   ${props => props.theme.font_size.xlarge};

@@ -43,12 +43,12 @@ module.exports = {
         icon: `static/favicon.svg`,
       },
     },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`roboto\:400,700`],
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-fonts`,
+    //   options: {
+    //     fonts: [`roboto\:400,700`],
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-alias-imports`,
       options: {

@@ -87,7 +87,7 @@ const FooterWrapper = styled.footer`
 `;
 
 const Copyright = styled.div`
-  font-family: ${props => props.theme.font.secondary};
+  //font-family: ${props => props.theme.font.secondary};
   ${props => props.theme.font_size.small};
   color: ${props => props.theme.color.black.regular};
 
