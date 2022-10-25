@@ -18,7 +18,7 @@ export const Wrapper = styled.div`
     text-align: left;
     cursor: pointer;
 
-    font-family: ${props => props.theme.font.secondary};
+    // font-family: ${props => props.theme.font.secondary};
     ${props => props.theme.font_size.regular};
     font-weight: bold;
     padding: 24px;
